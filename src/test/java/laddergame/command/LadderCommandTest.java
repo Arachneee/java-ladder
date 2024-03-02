@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class LadderCommandTest {
 
@@ -21,15 +24,12 @@ class LadderCommandTest {
     }
 
     @DisplayName("All 커맨드가 아니면 False 이다.")
-    @Test
-    void isAllCommandFalse() {
-        // given
-        final String value = "alll";
-
-        // when
+    @ParameterizedTest
+    @ValueSource(strings = {"alll", ""})
+    @NullSource
+    void isAllCommandFalse(String value) {
         final boolean allCommand = LadderCommand.isAllCommand(value);
 
-        // then
         assertThat(allCommand).isFalse();
     }
 }
