@@ -7,14 +7,14 @@ import laddergame.domain.ladder.Position;
 
 public class Names {
 
-    private final List<Name> names;
+    private final List<Name> values;
 
     public Names(final List<String> input) {
         validateSize(input);
         final List<Name> names = convertToNames(input);
         validateDuplication(names);
 
-        this.names = names;
+        this.values = names;
     }
 
     private void validateSize(final List<String> input) {
@@ -36,14 +36,14 @@ public class Names {
     }
 
     public int size() {
-        return names.size();
+        return values.size();
     }
 
     public Name get(final Position namePosition) {
-        return names.get(namePosition.getPosition());
+        return values.get(namePosition.getValue());
     }
 
-    public List<Name> getNames() {
-        return Collections.unmodifiableList(names);
+    public List<Name> getValues() {
+        return Collections.unmodifiableList(values);
     }
 }

@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class LadderTest {
+class LadderTest {
 
     @DisplayName("라인의 길이가 다른 사다리를 생성할 수 없다.")
     @Test

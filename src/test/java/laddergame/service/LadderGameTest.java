@@ -18,7 +18,7 @@ import laddergame.exception.LadderGameException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class LadderGameTest {
+class LadderGameTest {
 
     @DisplayName("참가자와 결과 수가 다르면 사다리를 생성할 수 없다.")
     @Test

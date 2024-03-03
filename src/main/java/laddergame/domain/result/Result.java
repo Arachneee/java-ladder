@@ -4,21 +4,21 @@ import java.util.Objects;
 
 public class Result {
 
-    private final String result;
+    private final String value;
 
-    public Result(final String result) {
-        validateEmpty(result);
-        this.result = result;
+    public Result(final String value) {
+        validateEmpty(value);
+        this.value = value;
     }
 
-    private void validateEmpty(final String result) {
-        if (result == null || result.isBlank()) {
+    private void validateEmpty(final String value) {
+        if (value == null || value.isBlank()) {
             throw new IllegalArgumentException("[ERROR] 빈 결과를 입력할 수 없습니다.");
         }
     }
 
-    public String getResult() {
-        return result;
+    public String getValue() {
+        return value;
     }
 
     @Override
@@ -29,11 +29,11 @@ public class Result {
         if (!(o instanceof final Result result1)) {
             return false;
         }
-        return Objects.equals(result, result1.result);
+        return Objects.equals(value, result1.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(result);
+        return Objects.hash(value);
     }
 }

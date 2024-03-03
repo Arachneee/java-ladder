@@ -76,7 +76,7 @@ public class LadderController {
     private void printOnceResult(final String inputName) {
         final Name name = new Name(inputName);
         final Result result = ladderGame.findResultByName(name);
-        outputView.printMatchingResult(result.getResult());
+        outputView.printMatchingResult(result.getValue());
     }
 
 }

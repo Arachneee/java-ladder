@@ -35,7 +35,7 @@ public class LadderFormatter {
                 .collect(Collectors.joining(LADDER_HEIGHT_UNIT, LADDER_HEIGHT_UNIT, LADDER_HEIGHT_UNIT));
     }
 
-    private static String formatPoint(final int width, final Boolean point) {
+    private static String formatPoint(final int width, final boolean point) {
         if (point) {
             return LADDER_WIDTH_UNIT.repeat(width);
         }

@@ -9,6 +9,9 @@ public class ExceptionHandler {
 
     private static int retryCount = 0;
 
+    private ExceptionHandler() {
+    }
+
     public static <T> T retryBySupplier(final Supplier<T> function, final OutputView outputView) {
         try {
             return function.get();

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class LadderHeightTest {
+class LadderHeightTest {
 
     @DisplayName("사다리 높이가 양수가 아닐시 예외를 발생시킨다.")
     @ParameterizedTest

@@ -27,7 +27,7 @@ public class NameFormatter {
 
         return names.stream()
                 .skip(1)
-                .limit(names.size() - 2)
+                .limit(names.size() - 2L)
                 .map(name -> String.format("%" + (width + 1) + "s", name))
                 .collect(Collectors.joining());
     }

@@ -7,7 +7,7 @@ import laddergame.domain.name.Names;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class LineSizeTest {
+class LineSizeTest {
 
 
     @DisplayName("Names로 라인 사이즈를 결정한다.")

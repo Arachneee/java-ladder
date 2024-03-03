@@ -20,8 +20,8 @@ public record LadderResult(
     }
 
     private static List<String> convertNames(final Names names) {
-        return names.getNames().stream()
-                .map(Name::getName)
+        return names.getValues().stream()
+                .map(Name::getValue)
                 .toList();
     }
 
@@ -32,8 +32,8 @@ public record LadderResult(
     }
 
     private static List<String> convertResults(final Results results) {
-        return results.getResults().stream()
-                .map(Result::getResult)
+        return results.getValues().stream()
+                .map(Result::getValue)
                 .toList();
     }
 

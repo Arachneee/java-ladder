@@ -7,6 +7,6 @@ import laddergame.domain.result.Result;
 public record MatchingResult(String name, String result) {
 
     public static MatchingResult from(final Entry<Name, Result> entry) {
-        return new MatchingResult(entry.getKey().getName(), entry.getValue().getResult());
+        return new MatchingResult(entry.getKey().getValue(), entry.getValue().getValue());
     }
 }

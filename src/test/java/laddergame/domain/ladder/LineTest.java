@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class LineTest {
+class LineTest {
 
 
     @DisplayName("겹치는 포인트를 가지는 Line을 생성할 수 없다.")

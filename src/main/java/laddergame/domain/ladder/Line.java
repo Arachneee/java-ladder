@@ -56,11 +56,11 @@ public class Line {
     }
 
     private boolean canGoLeft(final Position position) {
-        return position.isNot(0) && points.get(position.getPosition() - 1).isExist();
+        return position.isNot(0) && points.get(position.getValue() - 1).isExist();
     }
 
     private boolean canGoRight(final Position position) {
-        return position.isNot(points.size()) && points.get(position.getPosition()).isExist();
+        return position.isNot(points.size()) && points.get(position.getValue()).isExist();
     }
 
     public int size() {

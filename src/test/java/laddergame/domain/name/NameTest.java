@@ -9,7 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class NameTest {
+class NameTest {
 
     @DisplayName("이름을 입력받아 객체를 생성한다.")
     @ParameterizedTest
@@ -19,7 +19,7 @@ public class NameTest {
         final Name name = new Name(value);
 
         // then
-        assertThat(name.getName()).isEqualTo(value);
+        assertThat(name.getValue()).isEqualTo(value);
     }
 
     @DisplayName("이름의 길이가 5를 넘으면 예외를 발생시킨다.")

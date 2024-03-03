@@ -6,11 +6,11 @@ import laddergame.exception.LadderGameException;
 
 public class LineSize {
 
-    private final int lineSize;
+    private final int value;
 
     public LineSize(final Names names) {
         validateSize(names);
-        this.lineSize = names.size() - 1;
+        this.value = names.size() - 1;
     }
 
     private void validateSize(final Names names) {
@@ -19,8 +19,8 @@ public class LineSize {
         }
     }
 
-    public int getLineSize() {
-        return lineSize;
+    public int getValue() {
+        return value;
     }
 
     @Override
@@ -31,11 +31,11 @@ public class LineSize {
         if (!(o instanceof final LineSize lineSize1)) {
             return false;
         }
-        return getLineSize() == lineSize1.getLineSize();
+        return getValue() == lineSize1.getValue();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getLineSize());
+        return Objects.hash(getValue());
     }
 }

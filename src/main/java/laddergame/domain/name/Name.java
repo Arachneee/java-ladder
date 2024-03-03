@@ -7,13 +7,13 @@ public class Name {
 
     private static final int MAX_LENGTH = 5;
 
-    private final String name;
+    private final String value;
 
     public Name(final String input) {
         validateBlank(input);
         validateLength(input);
         validateInvalidName(input);
-        this.name = input;
+        this.value = input;
     }
 
     private void validateBlank(final String input) {
@@ -34,8 +34,8 @@ public class Name {
         }
     }
 
-    public String getName() {
-        return name;
+    public String getValue() {
+        return value;
     }
 
     @Override
@@ -46,11 +46,11 @@ public class Name {
         if (!(o instanceof final Name other)) {
             return false;
         }
-        return Objects.equals(getName(), other.getName());
+        return Objects.equals(getValue(), other.getValue());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName());
+        return Objects.hash(getValue());
     }
 }
